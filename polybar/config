@@ -1,0 +1,70 @@
+[colors]
+background = #0c0d11
+foreground = #e5e1cf
+
+[bar/main]
+background = #0c0d11
+foreground = #e5e1cf
+
+font-0 = FiraCode:size=14;3
+font-1 = Iosevka Nerd Font:size=16;3
+
+monitor = DP-1
+
+width = 100%
+height = 40
+offset-y=0
+offset-x=0
+
+border-top-size = 0
+border-bottom-size = 0
+border-right-size = 0
+border-left-size = 0
+
+bottom = false
+override-redirect = false
+
+fixed-center = true
+padding-left = 1 
+padding-right = 1
+module-margin = 1
+
+modules-left = workspaces
+modules-center = time
+
+tray-position = right
+tray-detached = false
+tray-background = ${colors.background}
+tray-scale = 1.0
+
+tray-maxsize = 20
+tray-padding = 0
+
+tray-offset-x = 0
+tray-offset-y = 0
+
+[module/workspaces]
+type = internal/xworkspaces
+enable-click = true
+enable-scroll = true
+
+label-active = ●
+label-occupied = ○
+label-urgent = ○
+label-empty = ○
+
+label-occupied-padding = 1
+label-empty-padding = 1
+label-urgent-padding = 1
+label-active-padding = 1
+
+label-active-foreground = ${colors.foreground}
+label-empty-foreground = ${colors.foreground}
+
+[module/time]
+type = internal/date
+
+date = %H:%M
+date-alt = %A %d %B %Y
+
+interval = 1.0
